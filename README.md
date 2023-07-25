@@ -1,6 +1,8 @@
 # Automation challenge 2: Jmeter
 
-
+Prepare an JMeter project to validate if the following endpoint support a throughput 5 request per second: 
+https://api.stackexchange.com/docs/articles#order=desc&sort=activity&filter=default&site=stackoverfl
+ow&run=true
 
 ## Table of Contents
 
@@ -10,11 +12,11 @@
 
 
 ## Introduction
-
-Prepare an JMeter project to validate if the following endpoint support a throughput 5 request per second: 
-https://api.stackexchange.com/docs/articles#order=desc&sort=activity&filter=default&site=stackoverfl
-ow&run=true
-
+The only non-functional requirement was to assert that the endpoint return 5 valid responses per second. However, I've assumed that we need to iterate those calls during a certain time. 
+To do so, and to make the test more flexible, two parameters have been defined. They allow the user to modify the number of request per seconds and the amount of time during those request should contionue performing OK. Those parameters are: 
+* rps (request per seconds): Set by default to 5.
+* totalTime: Number of seconds where the test will continue calling 5 rps. Set by default to 60.
+Both may be changed in the object "parameters" (indise the jmx file).
 
 ## Installation
 

@@ -28,14 +28,16 @@ To do so, and to make the test more flexible, two parameters have been defined. 
 
 How to execute the tests?
 * From command line
+  - The first action will be to identify the [JmeterRootDirectory] (the place where jmeter has been installed). It will be used in the further steps.
   - Open the console/terminal and type [JmeterRootDirectory]\bin\jmeter -n -t [directory_where_the_jmx_file_is_downloaded]\getArticles.jmx -l [JmeterRootDirectory]/logFile0.log -e -o [JmeterRootDirectory]\results\
   - For example: C:\apache-jmeter-5.6.2\bin\jmeter -n -t C:\apache-jmeter-5.6.2\tests\getArticles.jmx -l C:\apache-jmeter-5.6.2\tests/logFile0.log -e -o C:\apache-jmeter-5.6.2\tests\results\
-  - This will create a log file and a basic HTML report inside the directory "results" (both in [JmeterRootDirectory]) . You can open the html and check the results in [JmeterRootDirectory]/results/index.html
+  - This will create a log file and a basic HTML report inside the directory "results" (both in [JmeterRootDirectory]/tests) . You can open the html and check the results in [JmeterRootDirectory]/results/index.html
   - **If you need to execute the test more than once, you will need the delete the log file and the directory results (both in [JmeterRootDirectory]).**
 * From the Jmeter UI
   - Open the console/terminal and go to [JmeterRootDirectory]/bin, type "jmeter" and ENTER (JmeterRootDirectory example: "C:\apache-jmeter-5.6.2\bin").
+  - Open the file getArticles.jmx.
   - Verify that the listeners ("View Results Tree" and "Summary Report") are enable (by default they will be enabled, but for running the test it is highly recommended to disable themn because they consume memory and may affect the test results).
-  - Click on "Start".
+  - Click on "Start" (the green arrow in the top menu).
   - Click on a listener to see the results.
   - **Keep in mind that this execution is slower than the "command line" one.**
  * From server

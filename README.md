@@ -1,8 +1,7 @@
 # Automation challenge 2: Jmeter
 
 Prepare an JMeter project to validate if the following endpoint support a throughput 5 request per second: 
-https://api.stackexchange.com/docs/articles#order=desc&sort=activity&filter=default&site=stackoverfl
-ow&run=true
+https://api.stackexchange.com/docs/articles#order=desc&sort=activity&filter=default&site=stackoverflow&run=true
 
 ## Table of Contents
 
@@ -22,7 +21,7 @@ Both may be changed in the object "parameters" (indise the jmx file).
 
 1. Verify that Java is installed in your computer, by opening the console/terminal and type "java --version".
 2. If not, install Java: https://www.java.com/en/download/help/download_options.html.
-3. Install Jmeter --> https://jmeter.apache.org/download_jmeter.cgi
+3. Install Jmeter: https://jmeter.apache.org/download_jmeter.cgi
 
 ## Usage
 

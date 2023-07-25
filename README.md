@@ -22,7 +22,8 @@ ow&run=true
 2. If not, install Java: https://www.java.com/en/download/help/download_options.html.
 3. Install Jmeter --> https://jmeter.apache.org/download_jmeter.cgi
 
-## Usage: How do to execute the tests?
+## Usage
 
+How do to execute the tests?
 * From command line
 * From the Jmeter UI

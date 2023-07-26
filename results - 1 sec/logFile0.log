@@ -1,0 +1,6 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1690386534202,467,get articles,200,OK,Thread Group 1-3,text,true,,5988,235,5,5,https://api.stackexchange.com/2.3/articles?order=desc&sort=activity&filter=default&site=stackoverflow&run=true,460,0,335
+1690386534013,656,get articles,200,OK,Thread Group 1-2,text,true,,5988,235,5,5,https://api.stackexchange.com/2.3/articles?order=desc&sort=activity&filter=default&site=stackoverflow&run=true,649,0,524
+1690386533888,776,get articles,200,OK,Thread Group 1-1,text,true,,5988,235,5,5,https://api.stackexchange.com/2.3/articles?order=desc&sort=activity&filter=default&site=stackoverflow&run=true,769,0,644
+1690386534399,430,get articles,200,OK,Thread Group 1-4,text,true,,5988,235,2,2,https://api.stackexchange.com/2.3/articles?order=desc&sort=activity&filter=default&site=stackoverflow&run=true,430,0,322
+1690386534601,413,get articles,200,OK,Thread Group 1-5,text,true,,5988,235,1,1,https://api.stackexchange.com/2.3/articles?order=desc&sort=activity&filter=default&site=stackoverflow&run=true,412,0,307

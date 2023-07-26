@@ -45,7 +45,19 @@ How to execute the tests?
    - This would be ***the ideal way for executing the tests*, because it will use server capabilities insteod of the local machine's ones.**
    - The steps are identical to the ones decribed on "From command line" option, but in the VM console/terminal.
 
+How to read the reports?
+* Download them to a local directory.
+* Go to directory \results and click on "index.html".
+* A Jmeter report will be shown with different tabs (see left menu).
+
 ## Conclusions
-* The first conclusion is that the API is protected from being overloaded. After some debugging (with some 200 response code), I started to receive 502 response code with the following body: {"error_id":502,"error_message":"too many requests from this IP, more requests available in 84268 seconds","error_name":"throttle_violation"}.
-* That means that my IP has been blocked for 24 hours and it is not able to call the server.
-* Unfortunately, I was not able to generate a Jmeter in-build report showing the 200 response code and therefore verify that the API supports 5 request per second.
+* The first conclusion is that the API is protected from being overloaded. After some debugging (with some 200 response code), I started to receive 502 response code with the following body: {"error_id":502,"error_message":"too many requests from this IP, more requests available in 84268 seconds","error_name":"throttle_violation"}. That means that after little traffic the server activates some security process and block the suspicious IP for 24 hours.
+* Once those 24 hours has passed, I could generate two reports:
+  1. Calling the API 5 times during 1 seconds
+     - All request return 200 status code with an average of 548.40 milliseconds
+     - Summarizing all request, 4.44 request were worked per second
+  2. Calling the API 5 times during 1 minute (60 seconds)
+     - 300 request were calling during one minute. The average time response was 120.31 milliseconds.
+     - 48.33% of the request shown 400 errors (145 out of 300)
+     - Summarizing all request, 4.48 request were worked per second (almost the same as the previous execution)
+* After that, I've started to received "throttle violation" errors again. So I was not able to go ahead with more tests.
